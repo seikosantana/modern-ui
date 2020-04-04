@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E58FDC33-91FE-4F4B-BE61-F2D6EE5C0AB7}</ProjectGuid>
+    <ProjectGuid>{85087F92-5BFE-4D61-AB4E-6108DA1115D5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>ModernUI</RootNamespace>
-    <AssemblyName>ModernButton</AssemblyName>
+    <AssemblyName>ToggleButton</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +20,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
     <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +29,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,24 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModernButton.cs">
-      <SubType>Component</SubType>
+    <Compile Include="ToggleButton.cs">
+      <SubType>UserControl</SubType>
       <CustomToolNamespace>ModernUI</CustomToolNamespace>
     </Compile>
-    <Compile Include="ModernButton.Designer.cs">
-      <DependentUpon>ModernButton.cs</DependentUpon>
+    <Compile Include="ToggleButton.Designer.cs">
+      <DependentUpon>ToggleButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TaskPanel\TaskPanel.csproj">
-      <Project>{adfe8117-6d46-4a4e-858f-01add62ccb90}</Project>
-      <Name>TaskPanel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tasks\Tasks.csproj">
-      <Project>{ff54950b-3ac5-4660-bae4-1f4bb60287aa}</Project>
-      <Name>Tasks</Name>
+    <EmbeddedResource Include="ToggleButton.resx">
+      <DependentUpon>ToggleButton.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BorderRadius\BorderRadius.csproj">
+      <Project>{52c5e241-35d9-4ead-b6e0-9677209c6436}</Project>
+      <Name>BorderRadius</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

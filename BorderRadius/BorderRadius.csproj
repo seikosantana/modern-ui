@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E58FDC33-91FE-4F4B-BE61-F2D6EE5C0AB7}</ProjectGuid>
+    <ProjectGuid>{52C5E241-35D9-4EAD-B6E0-9677209C6436}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ModernUI</RootNamespace>
-    <AssemblyName>ModernButton</AssemblyName>
+    <RootNamespace>BorderRadius</RootNamespace>
+    <AssemblyName>BorderRadius</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,8 +20,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,7 +28,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,25 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModernButton.cs">
+    <Compile Include="BorderRadius.cs">
       <SubType>Component</SubType>
-      <CustomToolNamespace>ModernUI</CustomToolNamespace>
     </Compile>
-    <Compile Include="ModernButton.Designer.cs">
-      <DependentUpon>ModernButton.cs</DependentUpon>
+    <Compile Include="BorderRadius.Designer.cs">
+      <DependentUpon>BorderRadius.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TaskPanel\TaskPanel.csproj">
-      <Project>{adfe8117-6d46-4a4e-858f-01add62ccb90}</Project>
-      <Name>TaskPanel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tasks\Tasks.csproj">
-      <Project>{ff54950b-3ac5-4660-bae4-1f4bb60287aa}</Project>
-      <Name>Tasks</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

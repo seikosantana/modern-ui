@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
@@ -53,19 +57,19 @@
     <Compile Include="DockerView.Designer.cs">
       <DependentUpon>DockerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form.Designer.cs">
+      <DependentUpon>Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DockerView.resx">
       <DependentUpon>DockerView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form.resx">
+      <DependentUpon>Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -159,14 +163,32 @@
     <None Include="Assets\icons\Edit User.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BorderRadius\BorderRadius.csproj">
+      <Project>{52C5E241-35D9-4EAD-B6E0-9677209C6436}</Project>
+      <Name>BorderRadius</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ModernButton\ModernButton.csproj">
       <Project>{E58FDC33-91FE-4F4B-BE61-F2D6EE5C0AB7}</Project>
       <Name>ModernButton</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ModernListView\ModernListView.csproj">
-      <Project>{3521BF37-8BEB-4658-A03D-B4B385FACEB4}</Project>
-      <Name>ModernListView</Name>
+    <ProjectReference Include="..\ModernCheckBox\ToggleButton.csproj">
+      <Project>{85087F92-5BFE-4D61-AB4E-6108DA1115D5}</Project>
+      <Name>ToggleButton</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TaskPanel\TaskPanel.csproj">
+      <Project>{ADFE8117-6D46-4A4E-858F-01ADD62CCB90}</Project>
+      <Name>TaskPanel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tasks\Tasks.csproj">
+      <Project>{FF54950B-3AC5-4660-BAE4-1F4BB60287AA}</Project>
+      <Name>Tasks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\icons\Product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

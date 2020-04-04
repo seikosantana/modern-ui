@@ -21,7 +21,6 @@ namespace Stylie
         int movY;
         bool isMoving;
         static DockerView Dck = new DockerView();
-        
         private void TitlebarPressed(object sender, MouseEventArgs e)
         {
             // Assign this method to mouse_Down event of Form or Panel,whatever you want
@@ -44,7 +43,7 @@ namespace Stylie
             {
                 if (WindowState == FormWindowState.Maximized)
                 {
-                    MaxBtn.PerformClick();
+                    btnMaximize.PerformClick();
                     movX = Width / 2;
                 }
                 else
@@ -144,7 +143,7 @@ namespace Stylie
                 {
                     if (isDoubleClicked == false)
                     {
-                        MaxBtn.PerformClick();
+                        btnMaximize.PerformClick();
                     }
                     else
                     {
@@ -186,7 +185,15 @@ namespace Stylie
             TextLabel.MouseDown += new MouseEventHandler(TitlebarPressed);
             TextLabel.MouseMove += new MouseEventHandler(TitlebarMoving);
             TextLabel.MouseUp += new MouseEventHandler(TitlebarReleased);
+            Tasks.LoadTasks();
+            Load += MainForm_Load;
             //Task.Run(Log);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            //borderRadius1.TargetControl = toggleButton1;
+            //borderRadius1.CornerRadius = 20;
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -196,7 +203,6 @@ namespace Stylie
             e.Graphics.DrawLine(pen, Width - 1, 0, Width - 1, this.Height);
             e.Graphics.DrawLine(pen, 0, Height - 1, Width, Height - 1);
             e.Graphics.DrawLine(pen, 0, 0, Width, 0);
-            InputTransaksiPanel.BackColor = this.BackColor;
             base.OnPaint(e);
         }
 
@@ -230,8 +236,7 @@ namespace Stylie
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TransaksiList.AddItem(new Item("Item1", "Test", "Test"));
-            //MessageBox.Show("Item added");
+            SetNavSelection((ModernButton)sender);
         }
 
         protected override void WndProc(ref Message message)
@@ -254,10 +259,31 @@ namespace Stylie
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SetNavSelection((ModernButton)sender);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SetNavSelection((ModernButton)sender);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SetNavSelection((ModernButton)sender);
+        }
+
+        private void modernCheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("asd");
+        }
+
+
         private void Maximize_Restore(object sender, MouseEventArgs e)
         {
             isDoubleClicked = true;
-            MaxBtn.PerformClick();
+            btnMaximize.PerformClick();
         }
 
         private void TitleBar_Click(object sender, EventArgs e)
@@ -269,12 +295,24 @@ namespace Stylie
         {
             if (this.WindowState == FormWindowState.Maximized)
             {
-                MaxBtn.BackgroundImage = Properties.Resources.Restore;
+                btnMaximize.BackgroundImage = Properties.Resources.Restore;
             }
             else
             {
-                MaxBtn.BackgroundImage = Properties.Resources.Maximize;
+                btnMaximize.BackgroundImage = Properties.Resources.Maximize;
             }
+        }
+
+        private void SetNavSelection(ModernButton SelectedButton)
+        {
+            foreach (Control control in NavPanel.Controls)
+            {
+                if (control is ModernButton)
+                {
+                    ((ModernButton)control).CheckedState = false;
+                }
+            }
+            SelectedButton.CheckedState = true;
         }
 
         private void Close_Click(object sender, EventArgs e)

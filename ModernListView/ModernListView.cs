@@ -20,8 +20,8 @@ namespace ModernUI
             ModernButton Lb = ListButton(item);
             this.Controls.Add(Lb);
             Lb.Description = item.Description;
-            Lb.Parent = Layout;
-            Layout.SetRow(Lb, Items.Count);
+            Lb.Parent = LayoutHelper;
+            LayoutHelper.SetRow(Lb, Items.Count);
             Lb.BringToFront();
             UpdateLayout();
         }
@@ -43,8 +43,8 @@ namespace ModernUI
         private void UpdateLayout()
         {
             int n = Items.Count;
-            Layout.RowCount = n + 1;
-            Layout.RowStyles.Add(new RowStyle() { SizeType = SizeType.Absolute, Height = 50 });
+            LayoutHelper.RowCount = n + 1;
+            LayoutHelper.RowStyles.Add(new RowStyle() { SizeType = SizeType.Absolute, Height = 50 });
         }
 
         public Item GetItem(string Name)

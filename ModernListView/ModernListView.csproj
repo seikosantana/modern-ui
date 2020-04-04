@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3521BF37-8BEB-4658-A03D-B4B385FACEB4}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ModernListView</RootNamespace>
+    <RootNamespace>ModernUI</RootNamespace>
     <AssemblyName>ModernListView</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ModernListView.cs">
       <SubType>UserControl</SubType>
+      <CustomToolNamespace>ModernUI</CustomToolNamespace>
     </Compile>
     <Compile Include="ModernListView.Designer.cs">
       <DependentUpon>ModernListView.cs</DependentUpon>
