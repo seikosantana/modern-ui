@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ModernComboBox
 {
-    public partial class UserControl1: UserControl
+    public partial class UserControl1: ComboBox
     {
         public UserControl1()
         {
