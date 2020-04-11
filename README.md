@@ -45,10 +45,11 @@ Documentation is not yet possible since class members are inconsistent. Modern U
 
 
 More desciprtions and further documentation will be added later.
-
-
+  
+  
+  
 Best regards,
+  
 
-
-
+  
 Seiko Santana
