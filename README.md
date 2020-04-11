@@ -35,10 +35,20 @@ Documentation is not yet possible since class members are inconsistent. Modern U
 | Tasks | Component to manage (display and hide) task | Systen.Windows.Forms.Component | Unstable |
 | Task | A view with label and set of panels as holder of set of controls for a specific part of task | System.Windows.Forms.UserControl | Ready |
 | ToggleButton | A switch for getting/setting boolean values | System.Windows.Forms.UserControl | Not Ready |
-| LoadingCircle | A bar, with moving circles that comes and go to indicate loading | System.Windows.Forms.UserControl |
+| LoadingCircle | A bar, with moving circles that comes and go to indicate loading | System.Windows.Forms.UserControl | Not Ready |
 
 | Status | Meaning |
 | ------ | ------- |
 | Ready | Ready to be implemented on real projects |
 | Unstable | Can be used, with some problems |
 | Not ready | Not working at all |
+
+
+More desciprtions and further documentation will be added later.
+
+
+Best regards,
+
+
+
+Seiko Santana
