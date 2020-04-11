@@ -32,8 +32,8 @@ Documentation is not yet possible since class members are inconsistent. Modern U
 | Form | Highly customized form that provides back button | System.Windows.Forms.Form | Not Ready |
 | ModernButton | Flat design button that matches the theme, with extended properties and method for different purposes | System.Windows.Forms.Button | Ready |
 | ModernListview | Flat design ListView to display list of items, up to 4 subitems | System.Windows.Forms.UserControl | Not Ready |
-| Tasks | Component to manage (display and hide) task | Systen.Windows.Forms.Component | Unstable |
-| Task | A view with label and set of panels as holder of set of controls for a specific part of task | System.Windows.Forms.UserControl | Ready |
+| Tasks | Component to manage (display and hide) TaskPanels | Systen.Windows.Forms.Component | Unstable |
+| TaskPanel | A view with label and set of panels as holder of set of controls for a specific part of task | System.Windows.Forms.UserControl | Ready |
 | ToggleButton | A switch for getting/setting boolean values | System.Windows.Forms.UserControl | Not Ready |
 | LoadingCircle | A bar, with moving circles that comes and go to indicate loading | System.Windows.Forms.UserControl | Not Ready |
 
