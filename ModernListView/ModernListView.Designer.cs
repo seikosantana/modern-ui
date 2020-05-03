@@ -31,15 +31,19 @@
             this.LayoutHelper = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // LayoutHelper
             // 
             this.LayoutHelper.AutoScroll = true;
+            this.LayoutHelper.AutoSize = true;
+            this.LayoutHelper.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.LayoutHelper.ColumnCount = 1;
             this.LayoutHelper.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.LayoutHelper.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LayoutHelper.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.LayoutHelper.Location = new System.Drawing.Point(0, 0);
             this.LayoutHelper.Margin = new System.Windows.Forms.Padding(0);
-            this.LayoutHelper.Name = "tableLayoutPanel1";
+            this.LayoutHelper.Name = "LayoutHelper";
+            this.LayoutHelper.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.LayoutHelper.RowCount = 2;
             this.LayoutHelper.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.LayoutHelper.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
@@ -55,6 +59,7 @@
             this.Name = "ModernListView";
             this.Size = new System.Drawing.Size(421, 284);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
