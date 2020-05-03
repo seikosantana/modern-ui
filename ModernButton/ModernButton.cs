@@ -56,7 +56,7 @@ namespace ModernUI
             Style = Styles.Button;
             SetStyle();
             Task = null;
-            ActivateTaskOnClick = true;
+            ActivateTaskOnClick = false;
             this.Font = new Font(new FontFamily("Segoe UI"), 11.25f, FontStyle.Regular);
         }
 
@@ -131,7 +131,10 @@ namespace ModernUI
 
         private void ActivateTask()
         {
-            Tasks.Hide();
+            if (ActivateTaskOnClick)
+            {
+                Tasks.Hide();
+            }
             if (!(Task is null))
             {
                 Task.Show();
@@ -170,7 +173,16 @@ namespace ModernUI
             {
                 CreateBorder(pevent);
             }
-            pevent.Graphics.DrawString(Description, new Font(Parent.Font.FontFamily, 11.25f, FontStyle.Regular), new SolidBrush(ForeColor), 4, 4);
+            var size = pevent.Graphics.MeasureString(this.Text, this.Font);
+            if (this.Style == Styles.Button)
+            {
+                if (!Enabled)
+                {
+                    pevent.Graphics.FillRectangle(new SolidBrush(this.BackColor), this.ClientRectangle);
+                    pevent.Graphics.DrawString(this.Text, this.Font, new SolidBrush(Color.FromArgb(154, 154, 154)), Size.Width / 2 - size.Width / 2, Size.Height / 2 - size.Height / 2);
+                }
+            }
+            pevent.Graphics.DrawString(Description, new Font(Parent.Font.FontFamily, 11.25f, FontStyle.Regular), new SolidBrush(ForeColor), 6, 4);
         }
     }
 }
