@@ -382,6 +382,7 @@ namespace ModernUI
             // modernButton1
             // 
             this.modernButton1.ActivateTaskOnClick = true;
+            this.modernButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.modernButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.modernButton1.CheckChangeType = ModernUI.ModernButton.CheckChangeTypes.AlwaysSwitchToTrue;
             this.modernButton1.CheckedState = false;
@@ -395,7 +396,7 @@ namespace ModernUI
             this.modernButton1.ForeColor = System.Drawing.Color.White;
             this.modernButton1.HasStates = false;
             this.modernButton1.IndicatorLocation = ModernUI.ModernButton.IndicatorLocations.Left;
-            this.modernButton1.Location = new System.Drawing.Point(159, 214);
+            this.modernButton1.Location = new System.Drawing.Point(284, 345);
             this.modernButton1.Name = "modernButton1";
             this.modernButton1.Size = new System.Drawing.Size(150, 32);
             this.modernButton1.Style = ModernUI.ModernButton.Styles.Button;
@@ -406,7 +407,7 @@ namespace ModernUI
             this.modernButton1.Title = null;
             this.modernButton1.UseVisualStyleBackColor = false;
             // 
-            // MainForm
+            // ModernForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -421,7 +422,7 @@ namespace ModernUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MinimumSize = new System.Drawing.Size(696, 412);
-            this.Name = "MainForm";
+            this.Name = "ModernForm";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.Text = "Manager";
             this.LayoutHelper.ResumeLayout(false);

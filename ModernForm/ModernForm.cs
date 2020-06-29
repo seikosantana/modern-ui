@@ -53,45 +53,46 @@ namespace ModernUI
                 }
                 if (WindowState != FormWindowState.Maximized)
                 {
-                    if (Cursor.Position.Y == 0 && Cursor.Position.X == 0)
+
+                    if (Cursor.Position.Y == Screen.FromHandle(this.Handle).WorkingArea.Top && Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Left)
                     {
                         Dck.Show();
-                        Dck.Location = new Point(0, 0);
+                        Dck.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Left, Screen.FromHandle(this.Handle).WorkingArea.Top);
                         Dck.Width = Screen.FromHandle(this.Handle).WorkingArea.Width / 2;
                         Dck.Height = Screen.FromHandle(this.Handle).WorkingArea.Height / 2;
                     }
-                    else if (Cursor.Position.Y > Screen.FromHandle(this.Handle).WorkingArea.Height - 1 && Cursor.Position.X == 0)
+                    else if (Cursor.Position.Y > Screen.FromHandle(this.Handle).WorkingArea.Top + Screen.FromHandle(this.Handle).WorkingArea.Height - 1 && Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Left)
                     {
                         Dck.Show();
-                        Dck.Location = new Point(0, Screen.FromHandle(this.Handle).WorkingArea.Height / 2);
+                        Dck.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Left, Screen.FromHandle(this.Handle).WorkingArea.Top + Screen.FromHandle(this.Handle).WorkingArea.Height / 2);
                         Dck.Width = Screen.FromHandle(this.Handle).WorkingArea.Width / 2;
                         Dck.Height = Screen.FromHandle(this.Handle).WorkingArea.Height / 2;
                     }
-                    else if (Cursor.Position.Y > Screen.FromHandle(this.Handle).WorkingArea.Height - 1 && Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Width - 1)
+                    else if (Cursor.Position.Y > Screen.FromHandle(this.Handle).WorkingArea.Top + Screen.FromHandle(this.Handle).WorkingArea.Height - 1 && Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Width - 1)
                     {
                         Dck.Show();
-                        Dck.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Width / 2, Screen.FromHandle(this.Handle).WorkingArea.Height / 2);
+                        Dck.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Width / 2, Screen.FromHandle(this.Handle).WorkingArea.Top + Screen.FromHandle(this.Handle).WorkingArea.Height / 2);
                         Dck.Width = Screen.FromHandle(this.Handle).WorkingArea.Width / 2;
                         Dck.Height = Screen.FromHandle(this.Handle).WorkingArea.Height / 2;
                     }
-                    else if (Cursor.Position.Y == 0 && Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Width - 1)
+                    else if (Cursor.Position.Y == Screen.FromHandle(this.Handle).WorkingArea.Top && Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Width - 1)
                     {
                         Dck.Show();
-                        Dck.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Width / 2, 0);
+                        Dck.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Width / 2, Screen.FromHandle(this.Handle).WorkingArea.Top);
                         Dck.Width = Screen.FromHandle(this.Handle).WorkingArea.Width / 2;
                         Dck.Height = Screen.FromHandle(this.Handle).WorkingArea.Height / 2;
                     }
-                    else if (Cursor.Position.Y == 0)
+                    else if (Cursor.Position.Y == Screen.FromHandle(this.Handle).WorkingArea.Top)
                     {
                         Dck.Show();
-                        Dck.SetDesktopLocation(0, 0);
+                        Dck.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Left, Screen.FromHandle(this.Handle).WorkingArea.Top);
                         Dck.Width = Screen.FromHandle(this.Handle).WorkingArea.Width;
                         Dck.Height= Screen.FromHandle(this.Handle).WorkingArea.Height;
                     }
-                    else if (Cursor.Position.X == 0)
+                    else if (Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Left)
                     {
                         Dck.Show();
-                        Dck.Location = new Point(0, 0);
+                        Dck.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Left, Screen.FromHandle(this.Handle).WorkingArea.Top);
                         Dck.Width = Screen.FromHandle(this.Handle).WorkingArea.Width / 2;
                         Dck.Height = Screen.FromHandle(this.Handle).WorkingArea.Height;
                     }
@@ -116,15 +117,15 @@ namespace ModernUI
             isMoving = false;
             if (WindowState != FormWindowState.Maximized)
             {
-                if (Cursor.Position.Y == 0 && Cursor.Position.X == 0)
+                if (Cursor.Position.Y == Screen.FromHandle(this.Handle).WorkingArea.Top && Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Left)
                 {
-                    this.Location = new Point(0, 0);
+                    this.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Left, Screen.FromHandle(this.Handle).WorkingArea.Top);
                     this.Width = Screen.FromHandle(this.Handle).WorkingArea.Width / 2;
                     this.Height = Screen.FromHandle(this.Handle).WorkingArea.Height / 2;
                 }
-                else if (Cursor.Position.Y > Screen.FromHandle(this.Handle).WorkingArea.Height - 1 && Cursor.Position.X == 0)
+                else if (Cursor.Position.Y > Screen.FromHandle(this.Handle).WorkingArea.Height - 1 && Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Left)
                 {
-                    this.Location = new Point(0, Screen.FromHandle(this.Handle).WorkingArea.Height / 2);
+                    this.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Left, Screen.FromHandle(this.Handle).WorkingArea.Top + Screen.FromHandle(this.Handle).WorkingArea.Height / 2);
                     this.Width = Screen.FromHandle(this.Handle).WorkingArea.Width / 2;
                     this.Height = Screen.FromHandle(this.Handle).WorkingArea.Height / 2;
                 }
@@ -134,13 +135,13 @@ namespace ModernUI
                     this.Width = Screen.FromHandle(this.Handle).WorkingArea.Width / 2;
                     this.Height = Screen.FromHandle(this.Handle).WorkingArea.Height / 2;
                 }
-                else if (Cursor.Position.Y == 0 && Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Width - 1)
+                else if (Cursor.Position.Y == Screen.FromHandle(this.Handle).WorkingArea.Top && Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Width - 1)
                 {
-                    this.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Width / 2, 0);
+                    this.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Width / 2, Screen.FromHandle(this.Handle).WorkingArea.Top);
                     this.Width = Screen.FromHandle(this.Handle).WorkingArea.Width / 2;
                     this.Height = Screen.FromHandle(this.Handle).WorkingArea.Height / 2;
                 }
-                else if (Cursor.Position.Y == 0)
+                else if (Cursor.Position.Y == Screen.FromHandle(this.Handle).WorkingArea.Top)
                 {
                     if (isDoubleClicked == false)
                     {
@@ -151,15 +152,15 @@ namespace ModernUI
                         isDoubleClicked = false;
                     }
                 }
-                else if (Cursor.Position.X == 0)
+                else if (Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Left)
                 {
-                    this.Location = new Point(0, 0);
+                    this.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Left, Screen.FromHandle(this.Handle).WorkingArea.Top);
                     this.Width = Screen.FromHandle(this.Handle).WorkingArea.Width / 2;
                     this.Height = Screen.FromHandle(this.Handle).WorkingArea.Height;
                 }
                 else if (Cursor.Position.X == Screen.FromHandle(this.Handle).WorkingArea.Width - 1)
                 {
-                    this.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Width/2, 0);
+                    this.Location = new Point(Screen.FromHandle(this.Handle).WorkingArea.Width/2, Screen.FromHandle(this.Handle).WorkingArea.Top);
                     this.Width = Screen.FromHandle(this.Handle).WorkingArea.Width / 2;
                     this.Height = Screen.FromHandle(this.Handle).WorkingArea.Height;
                 }
@@ -170,9 +171,9 @@ namespace ModernUI
             }
 
 
-            if (Top < Screen.FromHandle(this.Handle).Bounds.Top)
+            if (Top < Screen.FromHandle(this.Handle).WorkingArea.Top)
             {
-                Top = Screen.FromHandle(this.Handle).Bounds.Top;
+                Top = Screen.FromHandle(this.Handle).WorkingArea.Top;
             }
 
         }

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernForm", "Stylie\ModernForm.csproj", "{E7232DE1-338D-492F-9B39-779CCACD7177}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernListView", "ModernListView\ModernListView.csproj", "{3521BF37-8BEB-4658-A03D-B4B385FACEB4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernButton", "ModernButton\ModernButton.csproj", "{E58FDC33-91FE-4F4B-BE61-F2D6EE5C0AB7}"
@@ -23,16 +21,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernComboBox", "ModernCom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernMessageBox", "ModernMessageBox\ModernMessageBox.csproj", "{14FF6EB4-1BB7-4AE6-9872-8A4A856417DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernForm", "ModernForm\ModernForm.csproj", "{E7232DE1-338D-492F-9B39-779CCACD7177}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E7232DE1-338D-492F-9B39-779CCACD7177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E7232DE1-338D-492F-9B39-779CCACD7177}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E7232DE1-338D-492F-9B39-779CCACD7177}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7232DE1-338D-492F-9B39-779CCACD7177}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3521BF37-8BEB-4658-A03D-B4B385FACEB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3521BF37-8BEB-4658-A03D-B4B385FACEB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3521BF37-8BEB-4658-A03D-B4B385FACEB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,6 +65,10 @@ Global
 		{14FF6EB4-1BB7-4AE6-9872-8A4A856417DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14FF6EB4-1BB7-4AE6-9872-8A4A856417DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14FF6EB4-1BB7-4AE6-9872-8A4A856417DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7232DE1-338D-492F-9B39-779CCACD7177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7232DE1-338D-492F-9B39-779CCACD7177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7232DE1-338D-492F-9B39-779CCACD7177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7232DE1-338D-492F-9B39-779CCACD7177}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
