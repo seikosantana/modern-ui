@@ -12,9 +12,9 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using ModernUI;
 
-namespace Stylie
+namespace ModernUI
 {
-    public partial class MainForm : Form
+    public partial class ModernForm : Form
     {
         bool isDoubleClicked = false;
         int movX;
@@ -23,6 +23,7 @@ namespace Stylie
         static DockerView Dck = new DockerView();
         private void TitlebarPressed(object sender, MouseEventArgs e)
         {
+            
             // Assign this method to mouse_Down event of Form or Panel,whatever you want
             isMoving = true;
             if (sender is Panel)
@@ -167,9 +168,15 @@ namespace Stylie
             {
                 Dck.Visible = false;
             }
-            
+
+
+            if (Top < Screen.FromHandle(this.Handle).Bounds.Top)
+            {
+                Top = Screen.FromHandle(this.Handle).Bounds.Top;
+            }
+
         }
-        public MainForm()
+        public ModernForm()
         {
             MaximumSize = Screen.FromControl(this).WorkingArea.Size;
             SizeChanged += ChangeMaxImages;            

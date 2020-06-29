@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Stylie
+namespace ModernUI
 {
     public partial class DockerView : Form
     {

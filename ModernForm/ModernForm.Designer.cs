@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Stylie
+namespace ModernUI
 {
-    partial class MainForm
+    partial class ModernForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Stylie
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModernForm));
             this.LayoutHelper = new System.Windows.Forms.TableLayoutPanel();
             this.btnMaximize = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
@@ -82,7 +82,7 @@ namespace Stylie
             // btnMaximize
             // 
             this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnMaximize.BackgroundImage = global::Stylie.Properties.Resources.Maximize;
+            this.btnMaximize.BackgroundImage = global::ModernUI.Properties.Resources.Maximize;
             this.btnMaximize.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
@@ -101,7 +101,7 @@ namespace Stylie
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnBack.BackgroundImage = global::Stylie.Properties.Resources.Close;
+            this.btnBack.BackgroundImage = global::ModernUI.Properties.Resources.Close;
             this.btnBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(112)))), ((int)(((byte)(122)))));
@@ -120,7 +120,7 @@ namespace Stylie
             // Back
             // 
             this.Back.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.Back.BackgroundImage = global::Stylie.Properties.Resources.Back;
+            this.Back.BackgroundImage = global::ModernUI.Properties.Resources.Back;
             this.Back.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Back.FlatAppearance.BorderSize = 0;
             this.Back.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
@@ -161,7 +161,7 @@ namespace Stylie
             // MinBtn
             // 
             this.MinBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MinBtn.BackgroundImage = global::Stylie.Properties.Resources.Minimize;
+            this.MinBtn.BackgroundImage = global::ModernUI.Properties.Resources.Minimize;
             this.MinBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MinBtn.FlatAppearance.BorderSize = 0;
             this.MinBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
@@ -267,7 +267,7 @@ namespace Stylie
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.HasStates = true;
-            this.button4.Image = global::Stylie.Properties.Resources.Edit_User1;
+            this.button4.Image = global::ModernUI.Properties.Resources.Edit_User1;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.IndicatorLocation = ModernUI.ModernButton.IndicatorLocations.Left;
             this.button4.Location = new System.Drawing.Point(0, 122);
@@ -302,7 +302,7 @@ namespace Stylie
             this.btnLihatTransaksi.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnLihatTransaksi.ForeColor = System.Drawing.Color.White;
             this.btnLihatTransaksi.HasStates = true;
-            this.btnLihatTransaksi.Image = global::Stylie.Properties.Resources.List;
+            this.btnLihatTransaksi.Image = global::ModernUI.Properties.Resources.List;
             this.btnLihatTransaksi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLihatTransaksi.IndicatorLocation = ModernUI.ModernButton.IndicatorLocations.Left;
             this.btnLihatTransaksi.Location = new System.Drawing.Point(0, 71);
@@ -348,7 +348,7 @@ namespace Stylie
             this.btnInputTransaksi.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnInputTransaksi.ForeColor = System.Drawing.Color.White;
             this.btnInputTransaksi.HasStates = true;
-            this.btnInputTransaksi.Image = global::Stylie.Properties.Resources.Add_Transaction1;
+            this.btnInputTransaksi.Image = global::ModernUI.Properties.Resources.Add_Transaction1;
             this.btnInputTransaksi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInputTransaksi.IndicatorLocation = ModernUI.ModernButton.IndicatorLocations.Left;
             this.btnInputTransaksi.Location = new System.Drawing.Point(0, 20);

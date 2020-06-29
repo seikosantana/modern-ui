@@ -1,4 +1,4 @@
-﻿namespace Stylie
+﻿namespace ModernUI
 {
     partial class DockerView
     {
